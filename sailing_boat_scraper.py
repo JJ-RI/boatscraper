@@ -89,7 +89,7 @@ class SailingBoatScraper:
         new_boats = []
 
         try:
-            url = "https://www.dba.dk/sejlbaade/"
+            url = "https://www.dba.dk/mobility/search/boat?class=2188"
             response = self.session.get(url, timeout=15)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -146,7 +146,7 @@ class SailingBoatScraper:
         new_boats = []
 
         try:
-            url = "https://www.blocket.se/annonser/hela_sverige/fordon/batar/segelbaatar"
+            url = "https://www.blocket.se/mobility/search/boat?class=2188"
             response = self.session.get(url, timeout=15)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -203,7 +203,7 @@ class SailingBoatScraper:
         new_boats = []
 
         try:
-            url = "https://www.finn.no/bap/forsale/search.html?product_category=2.93.3231"
+            url = "https://www.finn.no/mobility/search/boat?class=2188&sales_form=120&sales_form=121"
             response = self.session.get(url, timeout=15)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -260,7 +260,7 @@ class SailingBoatScraper:
         new_boats = []
 
         try:
-            url = "https://www.kleinanzeigen.de/s-segelboote/anzeige:angebote/preis::10000/c211l0"
+            url = "https://www.kleinanzeigen.de/s-boote-bootszubehoer/segelboote/c211+boote_bootszubehoer.art_s:segelboote"
             response = self.session.get(url, timeout=15)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -317,7 +317,7 @@ class SailingBoatScraper:
         new_boats = []
 
         try:
-            url = "https://www.marktplaats.nl/l/watersport-en-boten/zeilboten/#q:zeilboot"
+            url = "https://www.marktplaats.nl/l/watersport-en-boten/kajuitzeilboten-en-zeiljachten/"
             response = self.session.get(url, timeout=15)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
