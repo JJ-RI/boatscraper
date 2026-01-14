@@ -1,1 +1,99 @@
+name: Daily Sailing Boat Scraper
 
+on:
+  schedule:
+    # Run daily at 8 AM UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch:  # Allow manual triggering
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/scraper.yml'
+      - 'sailing_boat_scraper.py'
+
+jobs:
+  scrape-and-publish:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write  # Needed to push changes
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    
+    - name: Restore boat data from cache
+      uses: actions/cache@v4
+      with:
+        path: boat_data.json
+        key: boat-data-${{ github.run_id }}
+        restore-keys: |
+          boat-data-
+    
+    - name: Run scraper
+      run: |
+        python sailing_boat_scraper.py
+      env:
+        PYTHONUNBUFFERED: 1
+    
+    - name: Upload RSS feed as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: rss-feed-${{ github.run_number }}
+        path: sailing_boats.xml
+        retention-days: 7
+    
+    - name: Upload boat data as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: boat-data-${{ github.run_number }}
+        path: boat_data.json
+        retention-days: 30
+    
+    - name: Commit and push RSS feed
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # Add RSS feed and boat data
+        git add sailing_boats.xml boat_data.json
+        
+        # Only commit if there are changes
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Update sailing boats RSS feed - $(date +'%Y-%m-%d %H:%M')"
+          git push
+        fi
+    
+    - name: Generate summary
+      if: always()
+      run: |
+        echo "## Scraper Run Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f boat_data.json ]; then
+          TOTAL_BOATS=$(jq 'length' boat_data.json)
+          echo "- **Total boats tracked:** $TOTAL_BOATS" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        if [ -f sailing_boats.xml ]; then
+          RSS_SIZE=$(wc -c < sailing_boats.xml)
+          echo "- **RSS feed size:** $RSS_SIZE bytes" >> $GITHUB_STEP_SUMMARY
+          echo "- **RSS feed generated:** ✅" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- **RSS feed generated:** ❌" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Run time:** $(date)" >> $GITHUB_STEP_SUMMARY
