@@ -82,24 +82,26 @@ class SailingBoatScraper:
             dt = dt.replace(tzinfo=timezone.utc)
         return dt
 
-    def scrape_dba_dk(self):
-        """Scrape sailing boats from dba.dk"""
-        site_name = "dba.dk"
+    def _scrape_schibsted_cards(self, site_name, url, fallback_location):
+        """
+        Shared scraper for Schibsted marketplaces (dba.dk, blocket.se, finn.no).
+        All three render listings as 'article.sf-search-ad' cards with
+        identical inner markup.
+        """
         print(f"Scraping {site_name}...")
         new_boats = []
 
         try:
-            url = "https://www.dba.dk/mobility/search/boat?class=2188"
             response = self.session.get(url, timeout=15)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
 
-            listings = soup.find_all('tr', class_='dbaListing')
+            listings = soup.find_all('article', class_='sf-search-ad')
 
             for listing in listings[:20]:
                 try:
-                    link_elem = listing.find('a', class_='listingLink')
-                    if not link_elem:
+                    link_elem = listing.find('a', class_='sf-search-ad-link')
+                    if not link_elem or not link_elem.get('href'):
                         continue
 
                     boat_url = urljoin(url, link_elem['href'])
@@ -108,13 +110,20 @@ class SailingBoatScraper:
                     if boat_id in self.boats:
                         continue
 
-                    title = link_elem.get_text(strip=True)
+                    title_elem = listing.find('h2')
+                    title = title_elem.get_text(strip=True) if title_elem else 'Unknown boat'
 
-                    price_elem = listing.find('td', class_='price')
-                    price = price_elem.get_text(strip=True) if price_elem else 'Price not listed'
+                    amount_elem = listing.select_one('.t3.font-bold')
+                    currency_elem = listing.select_one('.t4.font-bold')
+                    if amount_elem:
+                        price = amount_elem.get_text(strip=True)
+                        if currency_elem:
+                            price = f"{price} {currency_elem.get_text(strip=True)}"
+                    else:
+                        price = 'Price not listed'
 
-                    location_elem = listing.find('td', class_='city')
-                    location = location_elem.get_text(strip=True) if location_elem else 'Location not listed'
+                    location_elem = listing.select_one('.s-text-subtle span')
+                    location = location_elem.get_text(strip=True) if location_elem else fallback_location
 
                     boat_data = {
                         'id': boat_id,
@@ -138,120 +147,30 @@ class SailingBoatScraper:
             self.log_site_result(site_name, new_boats, e)
 
         return new_boats
+
+    def scrape_dba_dk(self):
+        """Scrape sailing boats from dba.dk"""
+        return self._scrape_schibsted_cards(
+            "dba.dk",
+            "https://www.dba.dk/mobility/search/boat?class=2188",
+            "Denmark",
+        )
 
     def scrape_blocket_se(self):
         """Scrape sailing boats from blocket.se"""
-        site_name = "blocket.se"
-        print(f"Scraping {site_name}...")
-        new_boats = []
-
-        try:
-            url = "https://www.blocket.se/mobility/search/boat?class=2188"
-            response = self.session.get(url, timeout=15)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.content, 'html.parser')
-
-            listings = soup.find_all('article')
-
-            for listing in listings[:20]:
-                try:
-                    link_elem = listing.find('a', href=True)
-                    if not link_elem:
-                        continue
-
-                    boat_url = urljoin(url, link_elem['href'])
-                    boat_id = self.generate_id(boat_url)
-
-                    if boat_id in self.boats:
-                        continue
-
-                    title_elem = listing.find(['h2', 'h3'])
-                    title = title_elem.get_text(strip=True) if title_elem else 'Unknown boat'
-
-                    price_elem = listing.find(string=re.compile(r'kr'))
-                    price = price_elem.strip() if price_elem else 'Price not listed'
-
-                    location = 'Sweden'
-
-                    boat_data = {
-                        'id': boat_id,
-                        'title': title,
-                        'price': price,
-                        'location': location,
-                        'url': boat_url,
-                        'source': site_name,
-                        'date_found': self._now_iso_utc(),   # ✅ timezone-aware
-                    }
-
-                    self.boats[boat_id] = boat_data
-                    new_boats.append(boat_data)
-
-                except Exception:
-                    continue
-
-            self.log_site_result(site_name, new_boats)
-
-        except Exception as e:
-            self.log_site_result(site_name, new_boats, e)
-
-        return new_boats
+        return self._scrape_schibsted_cards(
+            "blocket.se",
+            "https://www.blocket.se/mobility/search/boat?class=2188",
+            "Sweden",
+        )
 
     def scrape_finn_no(self):
         """Scrape sailing boats from finn.no"""
-        site_name = "finn.no"
-        print(f"Scraping {site_name}...")
-        new_boats = []
-
-        try:
-            url = "https://www.finn.no/mobility/search/boat?class=2188&sales_form=120&sales_form=121"
-            response = self.session.get(url, timeout=15)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.content, 'html.parser')
-
-            listings = soup.find_all('article', class_='ads__unit')
-
-            for listing in listings[:20]:
-                try:
-                    link_elem = listing.find('a', href=True)
-                    if not link_elem:
-                        continue
-
-                    boat_url = urljoin(url, link_elem['href'])
-                    boat_id = self.generate_id(boat_url)
-
-                    if boat_id in self.boats:
-                        continue
-
-                    title_elem = listing.find(['h2', 'h3'])
-                    title = title_elem.get_text(strip=True) if title_elem else 'Unknown boat'
-
-                    price_elem = listing.find(string=re.compile(r'kr'))
-                    price = price_elem.strip() if price_elem else 'Price not listed'
-
-                    location = 'Norway'
-
-                    boat_data = {
-                        'id': boat_id,
-                        'title': title,
-                        'price': price,
-                        'location': location,
-                        'url': boat_url,
-                        'source': site_name,
-                        'date_found': self._now_iso_utc(),   # ✅ timezone-aware
-                    }
-
-                    self.boats[boat_id] = boat_data
-                    new_boats.append(boat_data)
-
-                except Exception:
-                    continue
-
-            self.log_site_result(site_name, new_boats)
-
-        except Exception as e:
-            self.log_site_result(site_name, new_boats, e)
-
-        return new_boats
+        return self._scrape_schibsted_cards(
+            "finn.no",
+            "https://www.finn.no/mobility/search/boat?class=2188&sales_form=120&sales_form=121",
+            "Norway",
+        )
 
     def scrape_kleinanzeigen_de(self):
         """Scrape sailing boats from kleinanzeigen.de"""
@@ -322,27 +241,39 @@ class SailingBoatScraper:
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
 
-            listings = soup.find_all('li', class_='mp-Listing')
+            # Marktplaats renders client-side; listings live in the
+            # __NEXT_DATA__ JSON blob instead of the HTML.
+            script = soup.find('script', id='__NEXT_DATA__')
+            if not script or not script.string:
+                raise ValueError("__NEXT_DATA__ script not found")
+            next_data = json.loads(script.string)
+            listings = next_data['props']['pageProps']['searchRequestAndResponse']['listings']
 
             for listing in listings[:20]:
                 try:
-                    link_elem = listing.find('a', href=True)
-                    if not link_elem:
+                    vip_url = listing.get('vipUrl')
+                    if not vip_url:
                         continue
 
-                    boat_url = urljoin(url, link_elem['href'])
+                    boat_url = urljoin(url, vip_url)
                     boat_id = self.generate_id(boat_url)
 
                     if boat_id in self.boats:
                         continue
 
-                    title_elem = listing.find('h3')
-                    title = title_elem.get_text(strip=True) if title_elem else 'Unknown boat'
+                    title = listing.get('title') or 'Unknown boat'
 
-                    price_elem = listing.find('span', class_='mp-text-price-label')
-                    price = price_elem.get_text(strip=True) if price_elem else 'Price not listed'
+                    price_info = listing.get('priceInfo') or {}
+                    price_cents = price_info.get('priceCents')
+                    if price_cents:
+                        price = f"€{price_cents / 100:,.0f}"
+                        if price_info.get('priceType') == 'MIN_BID':
+                            price += ' (bidding)'
+                    else:
+                        price_type = price_info.get('priceType', '')
+                        price = price_type.replace('_', ' ').capitalize() if price_type else 'Price not listed'
 
-                    location = 'Netherlands'
+                    location = (listing.get('location') or {}).get('cityName') or 'Netherlands'
 
                     boat_data = {
                         'id': boat_id,
