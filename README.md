@@ -1,9 +1,9 @@
 # ⛵ Sailing Boat Scraper
 
-[![Daily Scraper](https://github.com/YOUR_USERNAME/sailing-boat-scraper/actions/workflows/scraper.yml/badge.svg)](https://github.com/YOUR_USERNAME/sailing-boat-scraper/actions/workflows/scraper.yml)
-[![RSS Feed](https://img.shields.io/badge/RSS-Subscribe-orange)](https://YOUR_USERNAME.github.io/sailing-boat-scraper/sailing_boats.xml)
+[![Daily Scraper](https://github.com/JJ-RI/boatscraper/actions/workflows/scraper.yml/badge.svg)](https://github.com/JJ-RI/boatscraper/actions/workflows/scraper.yml)
+[![RSS Feed](https://img.shields.io/badge/RSS-Subscribe-orange)](https://jj-ri.github.io/boatscraper/sailing_boats.xml)
 
-Automated daily scraper for sailing boats across 5 major European marketplaces. Runs on GitHub Actions and generates an RSS feed updated daily.
+Automated daily scraper for sailing boats across 7 European marketplaces. Runs on GitHub Actions and generates an RSS feed updated daily.
 
 ## 🌍 Monitored Sites
 
@@ -14,6 +14,8 @@ Automated daily scraper for sailing boats across 5 major European marketplaces. 
 | 🇳🇴 Norway | finn.no | ✅ Active |
 | 🇩🇪 Germany | kleinanzeigen.de | ✅ Active |
 | 🇳🇱 Netherlands | marktplaats.nl | ✅ Active |
+| 🇩🇰 Scandinavia | scanboat.com | ✅ Active |
+| 🇬🇧 UK | apolloduck.co.uk | ✅ Active |
 
 ## 🚀 Quick Start
 
@@ -22,10 +24,8 @@ Automated daily scraper for sailing boats across 5 major European marketplaces. 
 **Subscribe to the RSS feed:**
 
 ```
-https://YOUR_USERNAME.github.io/sailing-boat-scraper/sailing_boats.xml
+https://jj-ri.github.io/boatscraper/sailing_boats.xml
 ```
-
-Replace `YOUR_USERNAME` with the repository owner's GitHub username.
 
 ### For Developers (Fork & Deploy)
 
@@ -35,32 +35,28 @@ Replace `YOUR_USERNAME` with the repository owner's GitHub username.
 4. **Enable GitHub Pages** (Settings → Pages → Deploy from main)
 5. **Done!** Runs automatically daily at 8 AM UTC
 
-📖 **Detailed setup guide:** [SETUP_GITHUB.md](SETUP_GITHUB.md)
-
 ## 📊 Features
 
 - ✅ **Fully Automated** - Runs daily via GitHub Actions
 - 📡 **RSS Feed** - Standard RSS 2.0 format
 - 💾 **Persistent Storage** - Tracks all boats to identify new listings
 - 🆓 **Free Hosting** - Uses GitHub's free tier
-- 🔍 **Multi-site** - 5 major European marketplaces
+- 🔍 **Multi-site** - 7 European marketplaces
 - 📈 **Statistics** - Detailed logs of each run
 - 🌐 **No Server Needed** - Completely serverless
 
 ## 📁 Repository Structure
 
 ```
-sailing-boat-scraper/
+boatscraper/
 ├── .github/
 │   └── workflows/
 │       └── scraper.yml          # GitHub Actions workflow
 ├── sailing_boat_scraper.py      # Main scraper script
 ├── requirements.txt             # Python dependencies
-├── boat_data.json              # Database of all boats
-├── sailing_boats.xml           # Generated RSS feed
-├── README.md                   # This file
-├── SETUP_GITHUB.md            # Detailed setup guide
-└── .gitignore                 # Git ignore rules
+├── boat_data.json               # Database of all boats
+├── sailing_boats.xml            # Generated RSS feed
+└── README.md                    # This file
 ```
 
 ## 🔄 How It Works
@@ -68,7 +64,7 @@ sailing-boat-scraper/
 ```mermaid
 graph LR
     A[GitHub Actions<br/>Daily at 8 AM UTC] --> B[Run Scraper]
-    B --> C[Scrape 5 Sites]
+    B --> C[Scrape 7 Sites]
     C --> D[Identify New Boats]
     D --> E[Update Database]
     E --> F[Generate RSS Feed]
@@ -77,7 +73,7 @@ graph LR
 ```
 
 1. **Scheduled Trigger**: GitHub Actions runs daily at 8 AM UTC
-2. **Web Scraping**: Fetches latest listings from all 5 sites
+2. **Web Scraping**: Fetches latest listings from all 7 sites
 3. **New Detection**: Compares with previous data to find new boats
 4. **RSS Generation**: Creates feed with boats from last 7 days
 5. **Auto-commit**: Updates repository with new data
@@ -126,9 +122,9 @@ Popular schedules:
 ### Customize Scraping
 
 Edit `sailing_boat_scraper.py`:
-- **Lines ~75-270**: Individual site scrapers
-- **Line ~275**: Number of listings per site (`[:20]`)
-- **Line ~220**: RSS feed timeframe (`timedelta(days=7)`)
+- One `scrape_<site>()` method per marketplace (dba.dk, blocket.se and finn.no share `_scrape_schibsted_cards()`)
+- Listings per site: the `[:20]` slice in each scraper
+- RSS feed timeframe: `timedelta(days=7)` in `generate_rss()`
 
 ## 📊 Monitoring
 
@@ -151,17 +147,14 @@ Each run logs:
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/sailing-boat-scraper.git
-cd sailing-boat-scraper
+git clone https://github.com/JJ-RI/boatscraper.git
+cd boatscraper
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Run scraper locally
 python sailing_boat_scraper.py
-
-# Test dependencies
-python test_scraper.py
 ```
 
 ## 🐛 Troubleshooting
@@ -184,25 +177,6 @@ python test_scraper.py
 - **Actions enabled**: Actions tab should be accessible
 - **Quota**: Check GitHub Actions minutes (2,000/month free)
 
-## 📈 Statistics
-
-View detailed statistics in workflow summaries:
-
-- Total boats tracked
-- New boats per run
-- Success rate per site
-- Historical data via artifacts
-
-## 🤝 Contributing
-
-Contributions welcome! Areas for improvement:
-
-- Additional marketplace sites
-- Better error handling
-- Email notifications
-- Advanced filtering options
-- Data export formats (JSON, CSV)
-
 ## 📄 License
 
 MIT License - Free to use and modify
@@ -215,22 +189,6 @@ MIT License - Free to use and modify
 - Some sites may have anti-scraping measures
 - Website structure may change requiring updates
 
-## 🔗 Links
-
-- **RSS Feed Validator**: https://validator.w3.org/feed/
-- **Cron Expression Helper**: https://crontab.guru/
-- **GitHub Actions Docs**: https://docs.github.com/en/actions
-
-## 💡 Tips
-
-1. Subscribe to the RSS feed in your favorite reader
-2. Star this repository to keep track of updates
-3. Check Actions tab weekly for any failures
-4. Customize the schedule to your preferences
-5. Enable GitHub notifications for workflow failures
-
 ---
 
 **Made with ❤️ for sailing enthusiasts**
-
-*Last updated: January 2026*

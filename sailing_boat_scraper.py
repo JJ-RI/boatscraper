@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Multi-site Sailing Boat Scraper
-Monitors dba.dk, blocket.se, finn.no, kleinanzeigen.de, and marktplaats.nl
+Monitors dba.dk, blocket.se, finn.no, kleinanzeigen.de, marktplaats.nl,
+scanboat.com, and apolloduck.co.uk
 Generates RSS feed for new sailing boats listed daily
 Optimized for GitHub Actions
 """
@@ -34,6 +35,7 @@ class SailingBoatScraper:
             'total_boats': len(self.boats),
             'sites_scraped': 0,
             'sites_failed': 0,
+            'total_sites': 0,
             'errors': []
         }
 
@@ -298,23 +300,163 @@ class SailingBoatScraper:
 
         return new_boats
 
+    def scrape_scanboat_com(self):
+        """Scrape sailing boats from scanboat.com"""
+        site_name = "scanboat.com"
+        print(f"Scraping {site_name}...")
+        new_boats = []
+
+        try:
+            url = ("https://www.scanboat.com/en/boat-market/boats"
+                   "?SearchCriteria.BoatClassification=sail&SearchCriteria.Searched=true")
+            response = self.session.get(url, timeout=15)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, 'html.parser')
+
+            # Search results live in boat-list__body; the page also has a
+            # promo slider with unfiltered boats we must not pick up.
+            result_body = soup.find('section', class_='boat-list__body')
+            if not result_body:
+                raise ValueError("boat-list__body not found")
+            listings = result_body.find_all(['div', 'section'], class_=['item', 'promotion'])
+
+            for listing in listings[:20]:
+                try:
+                    link_elem = listing.find('a', href=True)
+                    if not link_elem:
+                        continue
+
+                    boat_url = urljoin(url, link_elem['href'])
+                    boat_id = self.generate_id(boat_url)
+
+                    if boat_id in self.boats:
+                        continue
+
+                    title_elem = listing.find('h2')
+                    title = title_elem.get_text(strip=True) if title_elem else 'Unknown boat'
+
+                    price_elem = listing.select_one('.item__header .right p')
+                    price = price_elem.get_text(strip=True) if price_elem else 'Price not listed'
+
+                    country_match = re.search(r'Country\s*:\s*([^|]+)', listing.get_text())
+                    location = country_match.group(1).strip() if country_match else 'Scandinavia'
+
+                    boat_data = {
+                        'id': boat_id,
+                        'title': title,
+                        'price': price,
+                        'location': location,
+                        'url': boat_url,
+                        'source': site_name,
+                        'date_found': self._now_iso_utc(),   # ✅ timezone-aware
+                    }
+
+                    self.boats[boat_id] = boat_data
+                    new_boats.append(boat_data)
+
+                except Exception:
+                    continue
+
+            self.log_site_result(site_name, new_boats)
+
+        except Exception as e:
+            self.log_site_result(site_name, new_boats, e)
+
+        return new_boats
+
+    def scrape_apolloduck_uk(self):
+        """Scrape sailing boats from apolloduck.co.uk"""
+        site_name = "apolloduck.co.uk"
+        print(f"Scraping {site_name}...")
+        new_boats = []
+
+        try:
+            # _FeatureAdPanel blocks are site-wide paid promos (incl. motor
+            # boats), so only take standard/free ads; limit=100 because the
+            # server interleaves ~9 promos per 10 real ads.
+            url = "https://www.apolloduck.co.uk/boats-for-sale/sail?sort=0&fx=GBP&limit=100&iso=gb"
+            response = self.session.get(url, timeout=20)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, 'html.parser')
+
+            listings = soup.select(
+                'div.galleryPanels div._StandardAdPanel, div.galleryPanels div._FreeAdPanel'
+            )
+
+            for listing in listings[:20]:
+                try:
+                    title_elem = listing.select_one('._PanelTitle a')
+                    if not title_elem or not title_elem.get('href'):
+                        continue
+
+                    boat_url = urljoin(url, title_elem['href'])
+                    boat_id = self.generate_id(boat_url)
+
+                    if boat_id in self.boats:
+                        continue
+
+                    title = title_elem.get_text(strip=True)
+
+                    price = 'Price not listed'
+                    location = 'UK'
+                    for row in listing.select('table._PanelSpecTable tr'):
+                        label_elem = row.find('td', class_='_PanelSpecLabel')
+                        data_elem = row.find('td', class_='_PanelSpecData')
+                        if not label_elem or not data_elem:
+                            continue
+                        label = label_elem.get_text(strip=True).rstrip(':')
+                        if label == 'Price':
+                            price = data_elem.get_text(strip=True)
+                        elif label == 'Location':
+                            location = data_elem.get_text(strip=True)
+
+                    # Titles look like "For Sale: Finn 575 - £4,700"; strip
+                    # both decorations since the RSS title appends the price.
+                    title = re.sub(r'^For Sale:\s*', '', title)
+                    title = re.sub(r'\s+-\s+£[\d,]+$', '', title)
+
+                    boat_data = {
+                        'id': boat_id,
+                        'title': title,
+                        'price': price,
+                        'location': location,
+                        'url': boat_url,
+                        'source': site_name,
+                        'date_found': self._now_iso_utc(),   # ✅ timezone-aware
+                    }
+
+                    self.boats[boat_id] = boat_data
+                    new_boats.append(boat_data)
+
+                except Exception:
+                    continue
+
+            self.log_site_result(site_name, new_boats)
+
+        except Exception as e:
+            self.log_site_result(site_name, new_boats, e)
+
+        return new_boats
+
     def scrape_all(self):
         """Scrape all websites"""
         all_new_boats = []
 
-        all_new_boats.extend(self.scrape_dba_dk())
-        time.sleep(1)
+        scrapers = [
+            self.scrape_dba_dk,
+            self.scrape_blocket_se,
+            self.scrape_finn_no,
+            self.scrape_kleinanzeigen_de,
+            self.scrape_marktplaats_nl,
+            self.scrape_scanboat_com,
+            self.scrape_apolloduck_uk,
+        ]
+        self.stats['total_sites'] = len(scrapers)
 
-        all_new_boats.extend(self.scrape_blocket_se())
-        time.sleep(1)
-
-        all_new_boats.extend(self.scrape_finn_no())
-        time.sleep(1)
-
-        all_new_boats.extend(self.scrape_kleinanzeigen_de())
-        time.sleep(1)
-
-        all_new_boats.extend(self.scrape_marktplaats_nl())
+        for i, scraper in enumerate(scrapers):
+            all_new_boats.extend(scraper())
+            if i < len(scrapers) - 1:
+                time.sleep(1)
 
         self.save_data()
         self.stats['total_boats'] = len(self.boats)
@@ -325,7 +467,8 @@ class SailingBoatScraper:
         fg = FeedGenerator()
         fg.title('Sailing Boats for Sale - Multi-site Feed')
         fg.link(href='https://example.com', rel='alternate')
-        fg.description('New sailing boats from dba.dk, blocket.se, finn.no, kleinanzeigen.de, and marktplaats.nl')
+        fg.description('New sailing boats from dba.dk, blocket.se, finn.no, kleinanzeigen.de, '
+                       'marktplaats.nl, scanboat.com, and apolloduck.co.uk')
         fg.language('en')
 
         # Get boats from last 7 days (timezone-aware UTC cutoff)
@@ -365,8 +508,8 @@ class SailingBoatScraper:
         print("\n" + "=" * 60)
         print("SCRAPING STATISTICS")
         print("=" * 60)
-        print(f"Sites scraped successfully: {self.stats['sites_scraped']}/5")
-        print(f"Sites failed: {self.stats['sites_failed']}/5")
+        print(f"Sites scraped successfully: {self.stats['sites_scraped']}/{self.stats['total_sites']}")
+        print(f"Sites failed: {self.stats['sites_failed']}/{self.stats['total_sites']}")
         print(f"New boats found: {self.stats['new_boats']}")
         print(f"Total boats in database: {self.stats['total_boats']}")
 
@@ -412,7 +555,7 @@ def main():
     print(f"Run finished: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}")
 
     # Exit with non-zero code if all sites failed
-    if scraper.stats['sites_failed'] == 5:
+    if scraper.stats['sites_scraped'] == 0:
         print("\n⚠️  WARNING: All sites failed to scrape!")
         sys.exit(1)
 
