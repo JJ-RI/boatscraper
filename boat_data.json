@@ -70585,5 +70585,302 @@
     "url": "https://www.scanboat.com/en/boat-market/boats/sailingboat-bavaria-cruiser-32-17548293",
     "source": "scanboat.com",
     "date_found": "2026-09-12T12:05:24.328201+00:00"
+  },
+  "a355e191ca00578aca873143c6686d6e": {
+    "id": "a355e191ca00578aca873143c6686d6e",
+    "title": "Motorsejler med bådplads i Københavns bedste havn",
+    "price": "250.000 kr.",
+    "location": "København SV",
+    "url": "https://www.dba.dk/mobility/item/24875278",
+    "source": "dba.dk",
+    "date_found": "2026-09-13T13:14:43.085291+00:00"
+  },
+  "d59be07dfcf935de3981e0ae8712f989": {
+    "id": "d59be07dfcf935de3981e0ae8712f989",
+    "title": "Golden Cowrie 38 – Jordomsejler / langturssejler / bobåd",
+    "price": "445.000 kr.",
+    "location": "København S",
+    "url": "https://www.dba.dk/mobility/item/24872811",
+    "source": "dba.dk",
+    "date_found": "2026-09-13T13:14:43.085892+00:00"
+  },
+  "795834f48e5c3a9c680c5722d60d6774": {
+    "id": "795834f48e5c3a9c680c5722d60d6774",
+    "title": "Nordship 28 med overtagelse af havneplads i Gilleleje",
+    "price": "99.000 kr.",
+    "location": "Gilleleje",
+    "url": "https://www.dba.dk/mobility/item/24869757",
+    "source": "dba.dk",
+    "date_found": "2026-09-13T13:14:43.086430+00:00"
+  },
+  "52ccfea0165c02db84e98348e70287c8": {
+    "id": "52ccfea0165c02db84e98348e70287c8",
+    "title": "Granada 24 sejlbåd Inkl. bådstativ",
+    "price": "15.000 kr.",
+    "location": "Jyllinge",
+    "url": "https://www.dba.dk/mobility/item/24867780",
+    "source": "dba.dk",
+    "date_found": "2026-09-13T13:14:43.086952+00:00"
+  },
+  "5c3e2498172f816dc838bbb222ee23cf": {
+    "id": "5c3e2498172f816dc838bbb222ee23cf",
+    "title": "43-fods motorsejler med enorm plads – Perfekt husbåd eller flydende base!",
+    "price": "92.000 kr.",
+    "location": "Hvidovre",
+    "url": "https://www.dba.dk/mobility/item/24859566",
+    "source": "dba.dk",
+    "date_found": "2026-09-13T13:14:43.087444+00:00"
+  },
+  "356ef5f21e7f5958779758007d77f8a7": {
+    "id": "356ef5f21e7f5958779758007d77f8a7",
+    "title": "Soling",
+    "price": "15 000 kr",
+    "location": "Oxelösund",
+    "url": "https://www.blocket.se/mobility/item/26559611",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.563385+00:00"
+  },
+  "7c6843f15c727e6d437fa41d8bd2aa2b": {
+    "id": "7c6843f15c727e6d437fa41d8bd2aa2b",
+    "title": "Amoress 3/4 Ton 34 fot Peter Norlin 1974",
+    "price": "150 000 kr",
+    "location": "Täby",
+    "url": "https://www.blocket.se/mobility/item/26558615",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.564258+00:00"
+  },
+  "7e856c81abd5b5ddf4059670312b8d77": {
+    "id": "7e856c81abd5b5ddf4059670312b8d77",
+    "title": "Wasa 30",
+    "price": "40 000 kr",
+    "location": "Nacka",
+    "url": "https://www.blocket.se/mobility/item/25763344",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.565097+00:00"
+  },
+  "2143b70c56ea12ff4ac6c4bc9566e6e3": {
+    "id": "2143b70c56ea12ff4ac6c4bc9566e6e3",
+    "title": "Beneteau Cyclades 39.3",
+    "price": "985 000 kr",
+    "location": "Norrtälje ∙ Båtagent",
+    "url": "https://www.blocket.se/mobility/item/26549281",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.566416+00:00"
+  },
+  "43d53ecb1798cde4ad909d671c5473eb": {
+    "id": "43d53ecb1798cde4ad909d671c5473eb",
+    "title": "Albin viggen med motor",
+    "price": "3 500 kr",
+    "location": "Karlskrona",
+    "url": "https://www.blocket.se/mobility/item/25889859",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.567325+00:00"
+  },
+  "89913e8763f75ac234b4ace6ca3fe402": {
+    "id": "89913e8763f75ac234b4ace6ca3fe402",
+    "title": "Boström 31 (B31)",
+    "price": "95 000 kr",
+    "location": "Istorp",
+    "url": "https://www.blocket.se/mobility/item/26545884",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.568339+00:00"
+  },
+  "2c6a8c6882beb2c4539a47050a4529ea": {
+    "id": "2c6a8c6882beb2c4539a47050a4529ea",
+    "title": "IW31 – Sparkman & Stephens – Yanmar 3YM20",
+    "price": "109 000 kr",
+    "location": "Åkersberga",
+    "url": "https://www.blocket.se/mobility/item/26545896",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.569343+00:00"
+  },
+  "d0ecb5e6dbba251c9584d020737346e8": {
+    "id": "d0ecb5e6dbba251c9584d020737346e8",
+    "title": "Arcona 430",
+    "price": "3 385 404 kr",
+    "location": "Malmö ∙ Båtagent",
+    "url": "https://www.blocket.se/mobility/item/26543285",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.570593+00:00"
+  },
+  "ca2901f5ea38fc148a44603ad27607f0": {
+    "id": "ca2901f5ea38fc148a44603ad27607f0",
+    "title": "Fin Maxi95 till höstpris",
+    "price": "125 000 kr",
+    "location": "Askim",
+    "url": "https://www.blocket.se/mobility/item/26542332",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.571518+00:00"
+  },
+  "ed28b07d496cf03c36da59b7c0155452": {
+    "id": "ed28b07d496cf03c36da59b7c0155452",
+    "title": "X-332 Sport",
+    "price": "995 000 kr",
+    "location": "Stenungsund",
+    "url": "https://www.blocket.se/mobility/item/26343650",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.572784+00:00"
+  },
+  "8418d1d9746b6be3436669e54b6f5f28": {
+    "id": "8418d1d9746b6be3436669e54b6f5f28",
+    "title": "Nordship 808",
+    "price": "79 000 kr",
+    "location": "Tranås",
+    "url": "https://www.blocket.se/mobility/item/26537966",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.573615+00:00"
+  },
+  "3a6b622f85253d265eee7b0e4fafea14": {
+    "id": "3a6b622f85253d265eee7b0e4fafea14",
+    "title": "Andel Bavaria 35 Grekland",
+    "price": "75 000 kr",
+    "location": "Täby",
+    "url": "https://www.blocket.se/mobility/item/26536391",
+    "source": "blocket.se",
+    "date_found": "2026-09-13T13:14:45.574564+00:00"
+  },
+  "afdd043edb19b5cdd79d193b1990688f": {
+    "id": "afdd043edb19b5cdd79d193b1990688f",
+    "title": "Mørebas 33 MS – hyggelig og velutstyrt seilbåt / studentbolig midt i Bergen",
+    "price": "219 000 kr",
+    "location": "Bergen",
+    "url": "https://www.finn.no/mobility/item/476244093",
+    "source": "finn.no",
+    "date_found": "2026-09-13T13:14:47.547221+00:00"
+  },
+  "7bd06e130c21bcc73c46c2efd234840e": {
+    "id": "7bd06e130c21bcc73c46c2efd234840e",
+    "title": "Bavaria 50 Cruiser 2005 – Sjeldent pent eksemplar! Kun privatbrukt. Kun 1 eier!",
+    "price": "1 480 000 kr",
+    "location": "Ikornnes",
+    "url": "https://www.finn.no/mobility/item/461967043",
+    "source": "finn.no",
+    "date_found": "2026-09-13T13:14:47.548629+00:00"
+  },
+  "bd3668993a0739402ee5559f53c6b9b4": {
+    "id": "bd3668993a0739402ee5559f53c6b9b4",
+    "title": "Pen og romslig 2007 Bavaria 30 Cruiser med nytt drev",
+    "price": "470 000 kr",
+    "location": "Drøbak",
+    "url": "https://www.finn.no/mobility/item/469235385",
+    "source": "finn.no",
+    "date_found": "2026-09-13T13:14:47.549561+00:00"
+  },
+  "1d14460d1d94a8f95aa989dd3e0b1c08": {
+    "id": "1d14460d1d94a8f95aa989dd3e0b1c08",
+    "title": "Ønsker du å seile i Middelhavet eller bare ha en hytte på sjøen i Spania",
+    "price": "700 000 kr",
+    "location": "Horten",
+    "url": "https://www.finn.no/mobility/item/468125968",
+    "source": "finn.no",
+    "date_found": "2026-09-13T13:14:47.550812+00:00"
+  },
+  "87b288a7d493997ff1a8bfd842877a6a": {
+    "id": "87b288a7d493997ff1a8bfd842877a6a",
+    "title": "Monsun 31 - bud ønskes",
+    "price": "120 000 kr",
+    "location": "Florø",
+    "url": "https://www.finn.no/mobility/item/411404002",
+    "source": "finn.no",
+    "date_found": "2026-09-13T13:14:47.552250+00:00"
+  },
+  "ce53a57423f9c7a3fd2fe9be67d99e0a": {
+    "id": "ce53a57423f9c7a3fd2fe9be67d99e0a",
+    "title": "Til salgs: en pålitelig Pioneer 10-båt i plast med Johnson-motor.",
+    "price": "8 000 kr",
+    "location": "Lyngdal",
+    "url": "https://www.finn.no/mobility/item/475006233",
+    "source": "finn.no",
+    "date_found": "2026-09-13T13:14:47.553132+00:00"
+  },
+  "a54f0d83f48e8beba6e1b715661eb380": {
+    "id": "a54f0d83f48e8beba6e1b715661eb380",
+    "title": "Scanmar 33 med teakdekk (uvanlig option)  vurderes solgt til høstpris",
+    "price": "185 000 kr",
+    "location": "Skien",
+    "url": "https://www.finn.no/mobility/item/476207198",
+    "source": "finn.no",
+    "date_found": "2026-09-13T13:14:47.554309+00:00"
+  },
+  "96168ca91b90e853b833a125abb66701": {
+    "id": "96168ca91b90e853b833a125abb66701",
+    "title": "Killing til salg",
+    "price": "30 000 kr",
+    "location": "Stabekk",
+    "url": "https://www.finn.no/mobility/item/476231801",
+    "source": "finn.no",
+    "date_found": "2026-09-13T13:14:47.554854+00:00"
+  },
+  "0b8d5bb84531692269134bece5c14c34": {
+    "id": "0b8d5bb84531692269134bece5c14c34",
+    "title": "Velutstyrt Bavaria 42C",
+    "price": "1 000 000 kr",
+    "location": "Lillesand",
+    "url": "https://www.finn.no/mobility/item/476227833",
+    "source": "finn.no",
+    "date_found": "2026-09-13T13:14:47.555964+00:00"
+  },
+  "8fbfd39640f38a5cc64ab118b7344a11": {
+    "id": "8fbfd39640f38a5cc64ab118b7344a11",
+    "title": "BAVARIA CRUISER 34 STYLE - 3 lugarer, rullemast, gode seil, autopilot, radar ++",
+    "price": "1 790 000 kr",
+    "location": "Vettre ∙ BAVARIA BÅT NORGE AS - Tysk kvalitet - Norske løsninger - Best pris",
+    "url": "https://www.finn.no/mobility/item/476206892",
+    "source": "finn.no",
+    "date_found": "2026-09-13T13:14:47.557333+00:00"
+  },
+  "227619a4f8f231c26bdf15a4ee2a3efd": {
+    "id": "227619a4f8f231c26bdf15a4ee2a3efd",
+    "title": "Zeiljacht Comet850 bj. 1984 diepgang 1,30 stahoogte 185",
+    "price": "€8,500 (bidding)",
+    "location": "Winterswijk Meddo",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2442080286-zeiljacht-comet850-bj-1984-diepgang-1-30-stahoogte-185",
+    "source": "marktplaats.nl",
+    "date_found": "2026-09-13T13:14:51.215821+00:00"
+  },
+  "d45afa34d4f45b946365fc09546d16ac": {
+    "id": "d45afa34d4f45b946365fc09546d16ac",
+    "title": "Fellowship 28 compleet & instapklaar",
+    "price": "€6,500 (bidding)",
+    "location": "Heukelum",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2442143227-fellowship-28-compleet-instapklaar",
+    "source": "marktplaats.nl",
+    "date_found": "2026-09-13T13:14:51.216016+00:00"
+  },
+  "28f0004975cea3af125c4d9e1887d91f": {
+    "id": "28f0004975cea3af125c4d9e1887d91f",
+    "title": "Dehler 36 Cws",
+    "price": "72,500 EUR",
+    "location": "Germany\r\n\t\t\t\n\r\n\r\n\t\t\t\t\tEngine : Lombardini\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller",
+    "url": "https://www.scanboat.com/en/boat-market/boats/sailingboat-dehler-36-cws-17548416",
+    "source": "scanboat.com",
+    "date_found": "2026-09-13T13:14:52.723930+00:00"
+  },
+  "b724f172b02d755c3a059f38e538026e": {
+    "id": "b724f172b02d755c3a059f38e538026e",
+    "title": "Maxi 95",
+    "price": "24,860 EUR",
+    "location": "Denmark\r\n\t\t\t\n\r\n\r\n\t\t\t\t\tEngine : Volvo Penta D1-30\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller",
+    "url": "https://www.scanboat.com/en/boat-market/boats/sailingboat-maxi-95-17548410",
+    "source": "scanboat.com",
+    "date_found": "2026-09-13T13:14:52.724195+00:00"
+  },
+  "19ad9a5a3d74d2f48f8a69d6e8e0722d": {
+    "id": "19ad9a5a3d74d2f48f8a69d6e8e0722d",
+    "title": "Contessa 34 OOD",
+    "price": "27,500 EUR",
+    "location": "The Netherlands\r\n\t\t\t\n\r\n\r\n\t\t\t\t\tEngine : Sole\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller",
+    "url": "https://www.scanboat.com/en/boat-market/boats/sailingboat-contessa-34-ood-17548409",
+    "source": "scanboat.com",
+    "date_found": "2026-09-13T13:14:52.724409+00:00"
+  },
+  "a2324e3f3e23cae1bc7e77a734c60caa": {
+    "id": "a2324e3f3e23cae1bc7e77a734c60caa",
+    "title": "Nauticat 36 / Finmar 361",
+    "price": "60,330 EUR",
+    "location": "Denmark\r\n\t\t\t\n\r\n\r\n\t\t\t\t\tEngine : Perkins\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller",
+    "url": "https://www.scanboat.com/en/boat-market/boats/sailingboat-nauticat-36--finmar-361-17548346",
+    "source": "scanboat.com",
+    "date_found": "2026-09-13T13:14:52.724614+00:00"
   }
 }
