@@ -75112,5 +75112,455 @@
     "url": "https://www.apolloduck.co.uk/boat/wayfarer-mk-ii-for-sale/835770",
     "source": "apolloduck.co.uk",
     "date_found": "2026-09-27T13:47:05.443464+00:00"
+  },
+  "6ee5d5eabf25687a47199b92c6063cd8": {
+    "id": "6ee5d5eabf25687a47199b92c6063cd8",
+    "title": "Velholdt Nauticat 331",
+    "price": "935.000 kr.",
+    "location": "Fredericia",
+    "url": "https://www.dba.dk/mobility/item/25199009",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.835810+00:00"
+  },
+  "789ec9f16aa45e80246a4f6b43d03e14": {
+    "id": "789ec9f16aa45e80246a4f6b43d03e14",
+    "title": "LM 24 / Billig båd",
+    "price": "44.900 kr.",
+    "location": "Randers NV",
+    "url": "https://www.dba.dk/mobility/item/25340368",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.836149+00:00"
+  },
+  "fdc1a066697433eec2b1fcf83f2c0c65": {
+    "id": "fdc1a066697433eec2b1fcf83f2c0c65",
+    "title": "Maxi Fenix Dinette med nyere Volvo Penta motor",
+    "price": "85.000 kr.",
+    "location": "Sæby",
+    "url": "https://www.dba.dk/mobility/item/25333830",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.836479+00:00"
+  },
+  "2ff0c6d1ad8e66c5215c418e0a6639a3": {
+    "id": "2ff0c6d1ad8e66c5215c418e0a6639a3",
+    "title": "Velholdt Jeanneau Aquila 28 sejlbåd til salg",
+    "price": "42.000 kr.",
+    "location": "Høng",
+    "url": "https://www.dba.dk/mobility/item/14274017",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.836733+00:00"
+  },
+  "1a52c09c266d2e357788754cd6afc936": {
+    "id": "1a52c09c266d2e357788754cd6afc936",
+    "title": "Oe36 mark1",
+    "price": "157.500 kr.",
+    "location": "Horsens",
+    "url": "https://www.dba.dk/mobility/item/25332390",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.836990+00:00"
+  },
+  "e6ad8e6508c53cf69c76aa00afd4c57b": {
+    "id": "e6ad8e6508c53cf69c76aa00afd4c57b",
+    "title": "Bavaria 37 fra 2007 er en rigtig klassiker. Rigtigt meget båd og fuldt udstyrett",
+    "price": "585.000 kr.",
+    "location": "Faaborg ∙ Bådagent Danmark",
+    "url": "https://www.dba.dk/mobility/item/25326337",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.837251+00:00"
+  },
+  "2f19aee37deeb1235f462bddc8914967": {
+    "id": "2f19aee37deeb1235f462bddc8914967",
+    "title": "Flot Shipman 28",
+    "price": "85.000 kr.",
+    "location": "Holbæk",
+    "url": "https://www.dba.dk/mobility/item/7947363",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.837542+00:00"
+  },
+  "f15afab651e0ddf0f192c2301d917dca": {
+    "id": "f15afab651e0ddf0f192c2301d917dca",
+    "title": "Larsen 25, projekt",
+    "price": "12.500 kr.",
+    "location": "Aalborg",
+    "url": "https://www.dba.dk/mobility/item/25316921",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.837793+00:00"
+  },
+  "2bd89df0ffe16ce93c86eb2b317b0b16": {
+    "id": "2bd89df0ffe16ce93c86eb2b317b0b16",
+    "title": "Balaton 21 – Renoveret diesel, nyt storsejl & bådstativ",
+    "price": "19.750 kr.",
+    "location": "Ishøj",
+    "url": "https://www.dba.dk/mobility/item/25313226",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.838037+00:00"
+  },
+  "1a42fb069829fe10cfa20587244cca44": {
+    "id": "1a42fb069829fe10cfa20587244cca44",
+    "title": "Wayfarer",
+    "price": "12.000 kr.",
+    "location": "Rønnede",
+    "url": "https://www.dba.dk/mobility/item/20314741",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.838281+00:00"
+  },
+  "1171f57211810a9869d751864b3b18da": {
+    "id": "1171f57211810a9869d751864b3b18da",
+    "title": "Flot Granada 31/32",
+    "price": "100.000 kr.",
+    "location": "Farsø",
+    "url": "https://www.dba.dk/mobility/item/25301499",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.838533+00:00"
+  },
+  "f3e80d2ae171e2b3a957b1a886802573": {
+    "id": "f3e80d2ae171e2b3a957b1a886802573",
+    "title": "Blue Dane 32 – 1977 – meget velholdt – nyt storsejl 2025",
+    "price": "129.000 kr.",
+    "location": "Aarhus C",
+    "url": "https://www.dba.dk/mobility/item/23922953",
+    "source": "dba.dk",
+    "date_found": "2026-09-28T16:40:28.838799+00:00"
+  },
+  "337bd67f48fd0a4dc0d0418a52d34620": {
+    "id": "337bd67f48fd0a4dc0d0418a52d34620",
+    "title": "Winga 78 – Volvo Penta D1-30 (210 h)",
+    "price": "129 000 kr",
+    "location": "Grödinge",
+    "url": "https://www.blocket.se/mobility/item/25254188",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.676881+00:00"
+  },
+  "a90a1d7191d5079d2138f8f772044956": {
+    "id": "a90a1d7191d5079d2138f8f772044956",
+    "title": "Nauticat 33 Ketch",
+    "price": "1 100 000 kr",
+    "location": "Nyköping ∙ Knape Marin AB",
+    "url": "https://www.blocket.se/mobility/item/26970246",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.677591+00:00"
+  },
+  "08fd6ecb2ac8c69ddcf064118ab6329f": {
+    "id": "08fd6ecb2ac8c69ddcf064118ab6329f",
+    "title": "Smaragd S149",
+    "price": "128 000 kr",
+    "location": "Lidingö",
+    "url": "https://www.blocket.se/mobility/item/26966759",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.678017+00:00"
+  },
+  "513baa4d322227f4bbda319f99dd7941": {
+    "id": "513baa4d322227f4bbda319f99dd7941",
+    "title": "Garcia Exploration 45 / 2025",
+    "price": "11 895 000 kr",
+    "location": "Henån ∙ Berthon Scandinavia AB",
+    "url": "https://www.blocket.se/mobility/item/26967167",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.678500+00:00"
+  },
+  "78e5654007ca0c1b68d2f7ebf5aadb4d": {
+    "id": "78e5654007ca0c1b68d2f7ebf5aadb4d",
+    "title": "Flamingo 40 \"Camargue\" – Välseglande och rymlig klassiker (Harry Becker)",
+    "price": "75 000 kr",
+    "location": "Västerås",
+    "url": "https://www.blocket.se/mobility/item/21375611",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.678902+00:00"
+  },
+  "b1938a7bce7bb2abf04460d6b22bdf98": {
+    "id": "b1938a7bce7bb2abf04460d6b22bdf98",
+    "title": "Omega 34 uthyres Dalarö",
+    "price": "9 500 kr",
+    "location": "Dalarö",
+    "url": "https://www.blocket.se/mobility/item/26960582",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.679314+00:00"
+  },
+  "0bcd87615168cbd255af1eebd16b4e48": {
+    "id": "0bcd87615168cbd255af1eebd16b4e48",
+    "title": "Plastad träbåt",
+    "price": "50 000 kr",
+    "location": "Limhamn",
+    "url": "https://www.blocket.se/mobility/item/26955811",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.679700+00:00"
+  },
+  "65e5cbff1e9f186f891282e7c24f8c65": {
+    "id": "65e5cbff1e9f186f891282e7c24f8c65",
+    "title": "Contrast 36",
+    "price": "495 000 kr",
+    "location": "Pixbo",
+    "url": "https://www.blocket.se/mobility/item/26611243",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.680293+00:00"
+  },
+  "b02f1f7c702d32c3b77372af716fb087": {
+    "id": "b02f1f7c702d32c3b77372af716fb087",
+    "title": "Fin NORD 80",
+    "price": "35 000 kr",
+    "location": "Västerås",
+    "url": "https://www.blocket.se/mobility/item/24585948",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.680816+00:00"
+  },
+  "f8289bf6a726a13ee9f7497549c93da2": {
+    "id": "f8289bf6a726a13ee9f7497549c93da2",
+    "title": "Beneteau First 18SE | 2024",
+    "price": "395 000 kr",
+    "location": "Saltsjöbaden ∙ Yachtsale AB",
+    "url": "https://www.blocket.se/mobility/item/21760686",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.681308+00:00"
+  },
+  "0ca4fc4bc3725cf09447882575be65a6": {
+    "id": "0ca4fc4bc3725cf09447882575be65a6",
+    "title": "22 kvm Skärgårdskryssare - höstpris",
+    "price": "250 000 kr",
+    "location": "Huddinge",
+    "url": "https://www.blocket.se/mobility/item/22692872",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.681808+00:00"
+  },
+  "44f4c8fdacc9e4c064f08672afaca2d9": {
+    "id": "44f4c8fdacc9e4c064f08672afaca2d9",
+    "title": "Najad 361",
+    "price": "1 395 000 kr",
+    "location": "Helsingborg ∙ Navark Handels AB",
+    "url": "https://www.blocket.se/mobility/item/23566262",
+    "source": "blocket.se",
+    "date_found": "2026-09-28T16:40:30.682273+00:00"
+  },
+  "6b007cf61466c9c06e912198864da529": {
+    "id": "6b007cf61466c9c06e912198864da529",
+    "title": "2015 Jeanneau Sun Odyssey 469 – 1 eier  |  kort kjøl  |  meget godt utstyrt",
+    "price": "2 900 000 kr",
+    "location": "Drøbak ∙ Heitmann Marin AS",
+    "url": "https://www.finn.no/mobility/item/477522119",
+    "source": "finn.no",
+    "date_found": "2026-09-28T16:40:32.508529+00:00"
+  },
+  "c021de0803da9df61b29df705ec03e7d": {
+    "id": "c021de0803da9df61b29df705ec03e7d",
+    "title": "Albin Vega 27 med vedlikeholdsbehov GIS BORT ved hurtig avklaring",
+    "price": "Price not listed",
+    "location": "Oslo",
+    "url": "https://www.finn.no/mobility/item/477481820",
+    "source": "finn.no",
+    "date_found": "2026-09-28T16:40:32.509028+00:00"
+  },
+  "1cb9081d269a3b8a34b0c805a2eb887d": {
+    "id": "1cb9081d269a3b8a34b0c805a2eb887d",
+    "title": "Beneteau Oceanic Clipper 393.",
+    "price": "900 000 kr",
+    "location": "Vestre Vinnesvåg",
+    "url": "https://www.finn.no/mobility/item/477481183",
+    "source": "finn.no",
+    "date_found": "2026-09-28T16:40:32.509563+00:00"
+  },
+  "5ded0013fa5b88162529eac720addca5": {
+    "id": "5ded0013fa5b88162529eac720addca5",
+    "title": "Velutstyrt 3-lugars m/ lithium, solcelle, AIS, mye oppgradert",
+    "price": "649 000 kr",
+    "location": "Sandefjord",
+    "url": "https://www.finn.no/mobility/item/477467149",
+    "source": "finn.no",
+    "date_found": "2026-09-28T16:40:32.510247+00:00"
+  },
+  "a928b1d1a11ce46106034321c7cdb125": {
+    "id": "a928b1d1a11ce46106034321c7cdb125",
+    "title": "Seilbåt Halvtonner",
+    "price": "90 000 kr",
+    "location": "Nøtterøy",
+    "url": "https://www.finn.no/mobility/item/477095424",
+    "source": "finn.no",
+    "date_found": "2026-09-28T16:40:32.510810+00:00"
+  },
+  "981f53824a99cead461ad42aa25ef2b7": {
+    "id": "981f53824a99cead461ad42aa25ef2b7",
+    "title": "Bavaria 36 Cruiser Avantgarde 2012",
+    "price": "1 280 000 kr",
+    "location": "Nedstrand",
+    "url": "https://www.finn.no/mobility/item/477355294",
+    "source": "finn.no",
+    "date_found": "2026-09-28T16:40:32.511463+00:00"
+  },
+  "4b3226f00d23158f7610aefc781a9b8a": {
+    "id": "4b3226f00d23158f7610aefc781a9b8a",
+    "title": "Granada 27, zeilklaar, nieuwe motor en z-drive 2014",
+    "price": "€6,500",
+    "location": "Berkel en Rodenrijs",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2447443238-granada-27-zeilklaar-nieuwe-motor-en-z-drive-2014",
+    "source": "marktplaats.nl",
+    "date_found": "2026-09-28T16:40:36.010754+00:00"
+  },
+  "c6a642ff913b744f996c21d60bcb6227": {
+    "id": "c6a642ff913b744f996c21d60bcb6227",
+    "title": "Friendship 28, recente motor, wintermeeneemprijs. 1.20 diep!",
+    "price": "€4,950 (bidding)",
+    "location": "Soesterberg",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2443264119-friendship-28-recente-motor-wintermeeneemprijs-1-20-diep",
+    "source": "marktplaats.nl",
+    "date_found": "2026-09-28T16:40:36.010810+00:00"
+  },
+  "b316f4bbbe2c31483cffbada6f79914b": {
+    "id": "b316f4bbbe2c31483cffbada6f79914b",
+    "title": "Leer nog zeilen dit jaar! 23-oktober - 3-daagse ZEILCURSUS",
+    "price": "€380",
+    "location": "Langweer",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/a1377705682-leer-nog-zeilen-dit-jaar-23-oktober-3-daagse-zeilcursus",
+    "source": "marktplaats.nl",
+    "date_found": "2026-09-28T16:40:36.010842+00:00"
+  },
+  "7c8f9e3b08aedfa5f30847f8a46e0846": {
+    "id": "7c8f9e3b08aedfa5f30847f8a46e0846",
+    "title": "Etap 22",
+    "price": "€550 (bidding)",
+    "location": "Apeldoorn",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2388197580-etap-22",
+    "source": "marktplaats.nl",
+    "date_found": "2026-09-28T16:40:36.010869+00:00"
+  },
+  "1913d45c9099774a1df60c5cd2dfe187": {
+    "id": "1913d45c9099774a1df60c5cd2dfe187",
+    "title": "Zeiljacht",
+    "price": "€5,500",
+    "location": "Numansdorp",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2447804273-zeiljacht",
+    "source": "marktplaats.nl",
+    "date_found": "2026-09-28T16:40:36.010921+00:00"
+  },
+  "2ad032a2c2e60cd5cd76cc9341fc75c4": {
+    "id": "2ad032a2c2e60cd5cd76cc9341fc75c4",
+    "title": "Winterprijs! Vaarklaar,  zeiljacht. Type.: Jouët 32",
+    "price": "€11,500",
+    "location": "Kampen",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2398398751-winterprijs-vaarklaar-zeiljacht-type-jouet-32",
+    "source": "marktplaats.nl",
+    "date_found": "2026-09-28T16:40:36.010931+00:00"
+  },
+  "aa52bd2ffd290f5ccda701d9ca1f8a52": {
+    "id": "aa52bd2ffd290f5ccda701d9ca1f8a52",
+    "title": "Te koop Beneteau oceanis 300",
+    "price": "€34,500",
+    "location": "Lelystad",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2417733530-te-koop-beneteau-oceanis-300",
+    "source": "marktplaats.nl",
+    "date_found": "2026-09-28T16:40:36.010940+00:00"
+  },
+  "f09b669536ba9f7f601150e7fc7fd3e9": {
+    "id": "f09b669536ba9f7f601150e7fc7fd3e9",
+    "title": "Trio 92",
+    "price": "17,570 EUR",
+    "location": "Norway\r\n\t\t\t\n\r\n\r\n\t\t\t\t\tEngine : Yanmar 3 YM30\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller",
+    "url": "https://www.scanboat.com/en/boat-market/boats/sailingboat-trio-92-17549392",
+    "source": "scanboat.com",
+    "date_found": "2026-09-28T16:40:37.628020+00:00"
+  },
+  "3aa89359b44c592744ebd9a89f849e34": {
+    "id": "3aa89359b44c592744ebd9a89f849e34",
+    "title": "X-Yachts X-412",
+    "price": "107,500 EUR",
+    "location": "Denmark\r\n\t\t\t\n\r\n\r\n\t\t\t\t\tEngine : Volvo Penta MD2040\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller",
+    "url": "https://www.scanboat.com/en/boat-market/boats/sailingboat-x-yachts-x-412-17517015",
+    "source": "scanboat.com",
+    "date_found": "2026-09-28T16:40:37.628171+00:00"
+  },
+  "640a65d7ee33d3bed678f2a289f7d7f1": {
+    "id": "640a65d7ee33d3bed678f2a289f7d7f1",
+    "title": "X-Yachts 4.3",
+    "price": "380,000 EUR",
+    "location": "Italy\r\n\t\t\t\n\r\n\r\n\t\t\t\t\tEngine : Yanmar\r\n\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller\n\n\n\n\n\n\nPrivate seller",
+    "url": "https://www.scanboat.com/en/boat-market/boats/sailingboat-x-yachts-43-17549387",
+    "source": "scanboat.com",
+    "date_found": "2026-09-28T16:40:37.628290+00:00"
+  },
+  "5c7dab1866b1ddac775e16467b4a4df6": {
+    "id": "5c7dab1866b1ddac775e16467b4a4df6",
+    "title": "West Wight Scow",
+    "price": "£2,250",
+    "location": "UK",
+    "url": "https://www.apolloduck.co.uk/boat/sailing-dinghies-scow-for-sale/840514",
+    "source": "apolloduck.co.uk",
+    "date_found": "2026-09-28T16:40:44.944381+00:00"
+  },
+  "341d06ef12b99ba4f6b51409ef4a9033": {
+    "id": "341d06ef12b99ba4f6b51409ef4a9033",
+    "title": "Salterns TELA 16",
+    "price": "£8,000",
+    "location": "Falmouth  UK",
+    "url": "https://www.apolloduck.co.uk/boat/salterns-boats-tela-for-sale/840508",
+    "source": "apolloduck.co.uk",
+    "date_found": "2026-09-28T16:40:44.944722+00:00"
+  },
+  "fae3565ff9f943401e21b41a0a0cba51": {
+    "id": "fae3565ff9f943401e21b41a0a0cba51",
+    "title": "Blaze 835",
+    "price": "£6,250",
+    "location": "UK",
+    "url": "https://www.apolloduck.co.uk/boat/hartley-boats-for-sale/840513",
+    "source": "apolloduck.co.uk",
+    "date_found": "2026-09-28T16:40:44.945024+00:00"
+  },
+  "8eb67ade52e0a06173089f37a8b7dcbc": {
+    "id": "8eb67ade52e0a06173089f37a8b7dcbc",
+    "title": "Bayliner 2655 with private mooring",
+    "price": "£21,995",
+    "location": "UK",
+    "url": "https://www.apolloduck.co.uk/boat/bayliner-2655-ciera-for-sale/840496",
+    "source": "apolloduck.co.uk",
+    "date_found": "2026-09-28T16:40:44.945310+00:00"
+  },
+  "3c94b0173a524d3901e94d2b4ba8d80a": {
+    "id": "3c94b0173a524d3901e94d2b4ba8d80a",
+    "title": "P.W. Blandford Woodwych 17'6 Project",
+    "price": "£250",
+    "location": "Woodbridge  UK",
+    "url": "https://www.apolloduck.co.uk/boat/classic-boats-motor-boat-for-sale/840487",
+    "source": "apolloduck.co.uk",
+    "date_found": "2026-09-28T16:40:44.945619+00:00"
+  },
+  "4c7c55a28d14bdf745a3dc0d64e06d09": {
+    "id": "4c7c55a28d14bdf745a3dc0d64e06d09",
+    "title": "2005 Landau 20 Walkaround",
+    "price": "£12,000",
+    "location": "UK",
+    "url": "https://www.apolloduck.co.uk/boat/landau-20-walk-around-for-sale/840495",
+    "source": "apolloduck.co.uk",
+    "date_found": "2026-09-28T16:40:44.945900+00:00"
+  },
+  "dc1f08464277125dd280922be38f1a98": {
+    "id": "dc1f08464277125dd280922be38f1a98",
+    "title": "GP14 Full rear cradle Launching trolley",
+    "price": "£110",
+    "location": "UK",
+    "url": "https://www.apolloduck.co.uk/boat/boat-trailers-launching-aid-for-sale/840493",
+    "source": "apolloduck.co.uk",
+    "date_found": "2026-09-28T16:40:44.946158+00:00"
+  },
+  "e704746c8457287522a859bb14c8dbb1": {
+    "id": "e704746c8457287522a859bb14c8dbb1",
+    "title": "RS Vareo 575 – Ullswater",
+    "price": "£3,000",
+    "location": "UK",
+    "url": "https://www.apolloduck.co.uk/boat/rs-vareo-for-sale/840484",
+    "source": "apolloduck.co.uk",
+    "date_found": "2026-09-28T16:40:44.946452+00:00"
+  },
+  "31bbeacd51794378eb3ebf04fb8039f5": {
+    "id": "31bbeacd51794378eb3ebf04fb8039f5",
+    "title": "55ft Project Narrow Boat",
+    "price": "£16,500 Tax Paid",
+    "location": "Derby   UK",
+    "url": "https://www.apolloduck.co.uk/boat/r&d-fabrications-55-traditional-for-sale/840481",
+    "source": "apolloduck.co.uk",
+    "date_found": "2026-09-28T16:40:44.946737+00:00"
+  },
+  "2e47cf140c89ebb4f5d07d2baa63bbf0": {
+    "id": "2e47cf140c89ebb4f5d07d2baa63bbf0",
+    "title": "16ft day boat launch with 8HP outboard",
+    "price": "£3,400 Tax Not Paid",
+    "location": "Teddington  UK",
+    "url": "https://www.apolloduck.co.uk/boat/oysterman-16-for-sale/835748",
+    "source": "apolloduck.co.uk",
+    "date_found": "2026-09-28T16:40:44.947037+00:00"
   }
 }
