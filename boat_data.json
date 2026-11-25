@@ -88369,5 +88369,86 @@
     "url": "https://www.scanboat.com/en/boat-market/boats/sailingboat-elan-e5-17559325",
     "source": "scanboat.com",
     "date_found": "2026-11-24T19:27:08.064832+00:00"
+  },
+  "b33828ea6a8548742f204bd788090464": {
+    "id": "b33828ea6a8548742f204bd788090464",
+    "title": "Väderöjulle",
+    "price": "20 000 kr",
+    "location": "Mörbylånga",
+    "url": "https://www.blocket.se/mobility/item/28530546",
+    "source": "blocket.se",
+    "date_found": "2026-11-25T18:34:23.675985+00:00"
+  },
+  "c7c02904471eba6225d7dee8e1c118f9": {
+    "id": "c7c02904471eba6225d7dee8e1c118f9",
+    "title": "Skonaren Nina",
+    "price": "6 682 000 kr",
+    "location": "Helsingborg ∙ Navark Handels AB",
+    "url": "https://www.blocket.se/mobility/item/28535987",
+    "source": "blocket.se",
+    "date_found": "2026-11-25T18:34:23.677084+00:00"
+  },
+  "30b4e657f6e1ad868b2751231a503e63": {
+    "id": "30b4e657f6e1ad868b2751231a503e63",
+    "title": "Bavaria 34/3 Cruiser",
+    "price": "556 627 kr",
+    "location": "Blue Ocean Ab",
+    "url": "https://www.blocket.se/mobility/item/28531917",
+    "source": "blocket.se",
+    "date_found": "2026-11-25T18:34:23.677880+00:00"
+  },
+  "52440cf46176ecec387a68656e42f91a": {
+    "id": "52440cf46176ecec387a68656e42f91a",
+    "title": "Vinter/Vår projekt",
+    "price": "1 500 000 kr",
+    "location": "Ingarö",
+    "url": "https://www.blocket.se/mobility/item/28527185",
+    "source": "blocket.se",
+    "date_found": "2026-11-25T18:34:23.678322+00:00"
+  },
+  "28905e3900476c5c716772018616cec7": {
+    "id": "28905e3900476c5c716772018616cec7",
+    "title": "Discovery 55, AURORA POLARIS",
+    "price": "6 690 000 kr",
+    "location": "Randaberg",
+    "url": "https://www.finn.no/mobility/item/481580132",
+    "source": "finn.no",
+    "date_found": "2026-11-25T18:34:25.934818+00:00"
+  },
+  "609a2beac49e2a8de33c76d4c6227543": {
+    "id": "609a2beac49e2a8de33c76d4c6227543",
+    "title": "Jaguar Kajuitzeilboot 7,5m",
+    "price": "€699",
+    "location": "Eindhoven",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2459154771-jaguar-kajuitzeilboot-7-5m",
+    "source": "marktplaats.nl",
+    "date_found": "2026-11-25T18:34:30.286581+00:00"
+  },
+  "7d6ebc04bb2c92ba33deb60cbef505f0": {
+    "id": "7d6ebc04bb2c92ba33deb60cbef505f0",
+    "title": "Jeanneau Melody 34 prijs verlaagd",
+    "price": "€19,995",
+    "location": "Tilburg",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2409297205-jeanneau-melody-34-prijs-verlaagd",
+    "source": "marktplaats.nl",
+    "date_found": "2026-11-25T18:34:30.286627+00:00"
+  },
+  "f6d11b3d78f87641827049ef2b188ef6": {
+    "id": "f6d11b3d78f87641827049ef2b188ef6",
+    "title": "Lemsteraak visserman Stofberg 10meter, prijs onderhandelbaar",
+    "price": "Fast bid",
+    "location": "Ermelo",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2459091646-lemsteraak-visserman-stofberg-10meter-prijs-onderhandelbaar",
+    "source": "marktplaats.nl",
+    "date_found": "2026-11-25T18:34:30.286648+00:00"
+  },
+  "571bc9b2eb5895b5bbb1b99555cdff16": {
+    "id": "571bc9b2eb5895b5bbb1b99555cdff16",
+    "title": "folkboot",
+    "price": "Fast bid",
+    "location": "Dedemsvaart",
+    "url": "https://www.marktplaats.nl/v/watersport-en-boten/kajuitzeilboten-en-zeiljachten/m2469901193-folkboot",
+    "source": "marktplaats.nl",
+    "date_found": "2026-11-25T18:34:30.286683+00:00"
   }
 }
